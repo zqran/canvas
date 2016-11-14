@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="cv"></canvas>
+
+    <!-- 工具对象 -->
+    <script type="text/javascript" src="util.js"></script>
+    <!-- 基类 -->
+    <script type="text/javascript" src="Base.js"></script>
+    <!-- 小鸟 -->
+    <script type="text/javascript" src="bird.js"></script>
+    <!-- 天空 -->
+    <script type="text/javascript" src="sky.js"></script>
+    <!-- 陆地 -->
+    <script type="text/javascript" src="land.js"></script>
+    <!-- 管道 -->
+    <script type="text/javascript" src="pipe.js"></script>
+    <!-- 场景 -->
+    <script type="text/javascript" src="Scene.js"></script>
+    <!-- 时间 -->
+    <script type="text/javascript" src="timer.js"></script>
+    <!-- 主游戏对象 -->
+    <script type="text/javascript" src="Game.js"></script>
+    <!-- 观察者 -->
+    <script type="text/javascript" src="PubSub.js"></script>
+
+
+    <script>
+    var cv = document.querySelector("#cv");
+    cv.width = 800;
+    cv.height = 600;
+
+    var ctx = cv.getContext("2d");
+    // enjoy！
+
+
+    var fb = FlappyBird.getFlappyBird({ctx: ctx});
+    fb.start();
+    </script>
+</body>
+
+</html>
